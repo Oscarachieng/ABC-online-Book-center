@@ -26,8 +26,28 @@
     text-decoration: none;
     
 }
+
+
 .sign-up#checkout {
     border-left: 0.3px solid rgba(255, 255, 255, 0.502);
     border-right: 0.3px solid rgba(255, 255, 255, 0.529);
     padding: 0 10px 0 10px;
+}
+
+/* Styles the logo section*/
+
+div.logo {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0 20px 0;
+    width: 100%;
+    background-color: rgba(250, 245, 245, 0.944);
+}
+#logo-image img{
+    border-radius: 70%;
+}
+h3#name {
+    color: green;
+    font-size: xx-large;
+    font-style: oblique;
 }
