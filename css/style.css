@@ -39,7 +39,7 @@
 div.logo {
     display: flex;
     justify-content: space-around;
-    padding: 20px 0 20px 0;
+    padding: 20px 0 5px 0;
     width: 100%;
     background-color: whitesmoke;
 }
@@ -70,4 +70,27 @@ nav .navbutton {
 nav .navbutton :hover {
    color: blue;
    font-size: x-large;
+}
+
+/* styles the introduction section*/
+.introduction#introduction {
+    background-image: url("/assets/bgrnd.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+    background-color: aquamarine;
+    display: flex;
+}
+.intro {
+    float:  left;
+    width: 50%;
+}
+.intro#intro-statements{
+     text-align: center;
+     padding-top: 150px;
+}
+
+.intro#intro-statements p{
+    font-size: x-large;
 }
