@@ -94,3 +94,66 @@ nav .navbutton :hover {
 .intro#intro-statements p{
     font-size: x-large;
 }
+
+/* Styles the health sections*/
+
+.introduction#health {
+    height: 700px;
+    background-color: lightgreen;
+}
+#health-books, #accompanying-words{
+    text-align: center;
+}
+#recently-released, #deals, #remedies {
+    height: 500px;
+    border-top: 1px solid;
+    border-color: lightgreen;
+}
+
+.introduction#reveiew-slider {
+    height: 200px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: lightgreen;
+
+}
+/*Style the contacts sections*/
+#conts {
+    display: flex;
+    width: 100%;
+    background-color: whitesmoke;
+}
+#latest-tweet-message{
+   width: 50%;
+}
+
+#latest-tweet-message #latest-twitt{
+    text-align: center;
+    padding-left: 100px;
+}
+
+.contact{
+    display: flex;
+    padding: 0 0 0 100px;
+}
+#stay-connected {
+    width: 50%;
+    justify-content: space-evenly;
+    padding-left: 100px;
+}
+#stay-connected h3 em{
+    text-align: center;
+    padding-left: 100px;
+}
+.icons{
+    border-radius: 60%;
+    height: 30px;
+    margin: 0 20px;
+}
+#twitt{
+    border-radius: 60%;
+    margin: 10px;
+}
+.contact #message em{
+    font-size: x-large;
+}
