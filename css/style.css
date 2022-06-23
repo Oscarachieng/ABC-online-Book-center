@@ -156,4 +156,37 @@ nav .navbutton :hover {
 }
 .contact #message em{
     font-size: x-large;
+    ;
+}
+
+/* Styles the form section*/
+#form {
+     background-color: rgba(51, 160, 51, 0.915);
+     padding: 20px;
+ }
+
+label {
+    margin-left: 200px;
+    color: white;
+    font-size: x-large;
+}
+
+#email{
+    margin-left: 30px;
+    padding: 8px;
+    width: 200px;
+    background-color: rgba(51, 160, 51, 0.915);
+    color: white;
+    border-color: rgba(245, 245, 245, 0.775);
+    border-width: 1px;
+    font-size: large;
+}
+ ::placeholder{
+     color: white;
+ }
+
+form button {
+    margin-left: 20px;
+    padding: 8px;
+    border-color: transparent;
 }
