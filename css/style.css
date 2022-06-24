@@ -105,17 +105,20 @@ nav .navbutton :hover {
 /* Styles the health sections*/
 
 .introduction#health {
-    height: 550px;
-    background-color: lightgreen;
+    height: 600px;
+    margin-top: 20px;
+    background-color: aliceblue;
+    overflow-y: auto;
 }
 #product-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
     height: 350px;
     border-style: groove;
     border: black;
-    margin: 50px;
+    margin: 20px;
     background-color: aliceblue;
 }
 #health-books, #accompanying-words{
