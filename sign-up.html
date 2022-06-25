@@ -32,9 +32,10 @@
             margin: 0 auto 100px;
             padding: 45px;
             text-align: center;
-            background: rgba(7,40,195, 0.8);
+            background: rgba(7, 40, 195, 0.8);
         }
-        .register input{
+
+        .register input {
             outline: 1;
             background-color: #f2f2f2;
             font-size: 15px;
@@ -44,8 +45,31 @@
             margin: 0 0 30px;
             box-sizing: border-box;
         }
-        .register input#submit {
-            text-transform: capitalize;
+
+        p {
+            color: white
+        }
+
+         p a {
+            color: white;
+        }
+
+         p a:hover {
+            color: orangered;
+        }
+
+        .log-in-form input {
+            outline: 1;
+            background-color: #f2f2f2;
+            font-size: 15px;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            margin: 0 0 30px;
+            box-sizing: border-box;
+        }
+        .sign-up .log-in-form{
+            display: none;
         }
     </style>
 </head>
@@ -57,7 +81,14 @@
                 <input type="text" placeholder="Username" id="username" required /><br />
                 <input type="text" placeholder="email address" id="email" required /><br />
                 <input type="text" placeholder="password" id="password" required /><br />
-                <input type="submit" value="Sign-Up" id="submit" />
+                <input type="submit" value="SIGN-UP" id="submit" />
+                <p>Already Registered? <a href="#log-in">log-in</a></p>
+            </form>
+            <form action="" class="log-in-form" id="log-in">
+                <input type="text"  placeholder="Enter Username/email address" required>
+                <input type="password" name="password" placeholder="password" id="password">
+                <input type="submit" value="LOG-IN">
+                <p>Not yet registered? <a href="#create-account">Sign-Up</a></p>
             </form>
         </div>
     </div>
