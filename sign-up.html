@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>sign-up</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2),
+                    rgba(0, 0, 0, 0.2)),
+                url("/assets/backgroundimg.webp");
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+
+        div.sign-up {
+            width: 360px;
+            padding: 10% 0 0;
+            margin: auto;
+        }
+
+        div.sign-up#create-account {
+            position: relative;
+            max-width: 360px;
+            z-index: 1;
+            margin: 0 auto 100px;
+            padding: 45px;
+            text-align: center;
+            background: rgba(7,40,195, 0.8);
+        }
+        .register input{
+            outline: 1;
+            background-color: #f2f2f2;
+            font-size: 15px;
+            width: 100%;
+            padding: 15px;
+            border: 0;
+            margin: 0 0 30px;
+            box-sizing: border-box;
+        }
+        .register input#submit {
+            text-transform: capitalize;
+        }
+    </style>
 </head>
+
 <body>
     <div class="sign-up">
         <div class="sign-up" id="create-account">
             <form action="" class="register">
-                <input type="text" placeholder="Username" id="username" required><br>
-                <input type="text" placeholder="email address" id="email" required><br>
-                <input type="text" placeholder="password" id="password" required><br>
-                <input type="submit" value="Sign-Up">
+                <input type="text" placeholder="Username" id="username" required /><br />
+                <input type="text" placeholder="email address" id="email" required /><br />
+                <input type="text" placeholder="password" id="password" required /><br />
+                <input type="submit" value="Sign-Up" id="submit" />
             </form>
         </div>
     </div>
-<script src="form.js"></script>    
+    <script src="form.js"></script>
 </body>
+
 </html>

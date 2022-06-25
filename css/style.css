@@ -226,3 +226,19 @@ form button {
 .foot{
     border-left-color: white;
 }
+
+/* Styling the sign-up form
+*/
+div.sign-up{
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+div.sign-up#create-account{
+    position: relative;
+    max-width: 360px;
+    z-index: 1;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
