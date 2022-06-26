@@ -11,8 +11,6 @@
 const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000});
  
-
-
 //Grabbing the product-container element
 const product_container = document.querySelector("#product-container");
 
@@ -124,19 +122,9 @@ const renderProduct = (data) => {
 
      p.appendChild(removeItem);
      cart.appendChild(p);
-
-
     })
     productItem.appendChild(addTocat);
     
-
-
-    //product ID element.
-    // const productId = document.createElement("h4");
-    // productId.style.width = "50%";
-    // productId.style.padding = "20px";
-    // //productId.textContent = //`Product ID: ${element.}`
-	// productItem.appendChild(productId); 
     product_container.appendChild(productItem);
   });
 };

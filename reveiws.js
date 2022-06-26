@@ -32,13 +32,6 @@ const renderReveiws = (response) => {
         review_slide.style.fontSize = "15px";
         review_slide.style.height = "200px";
         review_slide.style.margin = "0 10 0 10"
-       // review_slide.style.display = "none";
-
-       /* const userImage = document.createElement("img");
-        userImage.style.height = "60px";
-        userImage.style.borderRadius = "60%"
-        userImage.src = element.image;
-        review_slide.appendChild(userImage);*/
 
         const name = document.createElement("h4");
         name.textContent = element.name;
