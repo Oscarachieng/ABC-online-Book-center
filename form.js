@@ -29,13 +29,13 @@ Lod-in Validation.
 */ 
 
 /*Log -in form elements.
-*/
+
 const log_in_form = document.querySelector("#log-in");
 const username_email = document.querySelector("#username_email").value;
 const password = document.querySelector("#password").value;
 const sign_up_a = document.querySelector("#p_sign_up_a")
 
-/*Adding event listener to the form */
+Adding event listener to the form 
 log_in_form.addEventListener("submit", logIn)
 
 const logIn = (username_email,password) => {
@@ -52,4 +52,4 @@ const logIn = (username_email,password) => {
     } else {
        alert("wrong username/password");
     }
-}
+}*/

@@ -8,6 +8,11 @@
 5.
 
 */
+const scroll = new SmoothScroll('a[href*="#"]', {
+  speed: 1000});
+ 
+
+
 //Grabbing the product-container element
 const product_container = document.querySelector("#product-container");
 
@@ -44,7 +49,7 @@ console.log(fetchData());
 						 = create currency element, append to parent 		
 2. 
 */
-
+const cart = document.querySelector(".cart");
 const renderProduct = (data) => {
   data.forEach((element) => {
     const productItem = document.createElement("div");
@@ -86,8 +91,45 @@ const renderProduct = (data) => {
     currency.style.fontStyle = "italics";
     currency.style.color = "chocolate";
     currency.textContent = `Currency : ${element.app_sale_range.currency}`
-	price_container.appendChild(currency); 
+	  price_container.appendChild(currency); 
     productItem.appendChild(price_container);
+
+    const addTocat = document.createElement("button");
+    addTocat.textContent = 'Add to Cart';
+    addTocat.style.padding = "4px";
+    addTocat.style.fontStyle= "oblique";
+    addTocat.style.color = "white";
+    addTocat.style.backgroundColor = "Orange";
+    addTocat.style.borderColor = "transparent";
+    addTocat.addEventListener("click",(e)=>{
+      e.preventDefault();
+     const p = document.createElement("p");
+     p.style.padding = "10px";
+     p.style.fontSize = "larger";
+     p.style.fontStyle = "oblique";
+     p.style.backgroundColor = "creme";
+     p.textContent = `${productTitle.textContent}  ${price.textContent}  ${currency.textContent} `;
+
+     const removeItem = document.createElement("button");
+     removeItem.style.padding = "8px";
+     removeItem.style.fontStyle = "oblique";
+     removeItem.style.backgroundColor = "orange";
+     removeItem.style.color = "white";
+     removeItem.style.borderColor = "transparent"
+     removeItem.textContent = "Remove";
+     removeItem.addEventListener("click", (e)=>{
+       e.preventDefault();
+       e.target.parentElement.remove(); 
+     })
+
+     p.appendChild(removeItem);
+     cart.appendChild(p);
+
+
+    })
+    productItem.appendChild(addTocat);
+    
+
 
     //product ID element.
     // const productId = document.createElement("h4");

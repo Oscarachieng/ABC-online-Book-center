@@ -5,51 +5,52 @@ const reveiws = document.querySelector("#reveiws");
 const fetchReviews = () => {
     fetch("http://localhost:3000/reviews")
         .then(response => response.json())
-        .then(data => {
-            console.log(data);
-            renderReveiws(data);
+        .then(response => {
+            renderReveiws(response);
+            console.log(response);
         })
         .catch(err => console.error(err));
 }
 fetchReviews()
 
 // function to render review data
-const renderReveiws = (data) => {
+const renderReveiws = (response) => {
 
     const review_container = document.createElement("div");
-    review_container.style.padding = "40px";
+    review_container.style.padding = "20px";
     review_container.style.position = "relative";
     review_container.style.alignContent = "center";
-    review_container.style.width = "80%";
-    review_container.style.height = "340px";
+    review_container.style.width = "auto";
+    review_container.style.height = "200px";
+    review_container.style.display = "flex"
 
-    data.forEach(element => {
-
+    response.forEach(element => {
         const review_slide = document.createElement("div");
         review_slide.style.alignContent = "center";
-        review_slide.style.padding = "20px";
         review_slide.style.textAlign = "center";
         review_slide.style.fontStyle = "italics";
-        review_slide.style.fontSize = "24px";
-        review_slide.style.height = "300px"
+        review_slide.style.fontSize = "15px";
+        review_slide.style.height = "200px";
+        review_slide.style.margin = "0 10 0 10"
+       // review_slide.style.display = "none";
 
-        const userImage = document.createElement("img");
+       /* const userImage = document.createElement("img");
         userImage.style.height = "60px";
         userImage.style.borderRadius = "60%"
-       // userImage.src = element.image;
-        review_slide.appendChild(userImage);
+        userImage.src = element.image;
+        review_slide.appendChild(userImage);*/
 
         const name = document.createElement("h4");
         name.textContent = element.name;
+        name.style.fontStyle = "italics"
             review_slide.appendChild(name);
         const message = document.createElement("p");
         message.textContent = element.text;
+        message.style.fontSize = "italics"
             review_slide.appendChild(message);
         review_container.appendChild(review_slide);
-
+        reveiws.appendChild(review_container);
     });
-
 }
-renderReveiws()
 
 reveiws.addEventListener("load", fetchReviews);
