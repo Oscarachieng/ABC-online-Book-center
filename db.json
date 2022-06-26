@@ -1,0 +1,29 @@
+{
+  "reviews": [
+    {
+        "image": "https://unsplash.com/photos/rDEOVtE7vOs",
+        "name": "Clinton Baracke",
+        "text": "Goods are delivered in good condition and shape and delivery is pretty fast, with purchases arriving earlier than actually indicated. The customer care service is also top notch, polite and prompt."
+    },
+    {
+        "image": "https://unsplash.com/photos/6VPEOdpFNAs",
+        "name": "Nancy Muthoni",
+        "text": "They have poor services ordered some items,then received a notification that they were ready for pickup, upon arriving at the pickup station,i.e posta Nakuru,the product had not yet arrived,you see I can't keep on going checking for a package that is not there,that is a wastage of resources,I have been trying to contact their customer care for assistance to no avail,am really disappointed.."
+    },
+    {
+        "image": "https://unsplash.com/photos/Z9lbmEjyYjU",
+        "name": "Rachel Hardiman",
+        "text": "I am happy with their products, pricing, description, & delivery."
+    },
+    {
+        "images": "https://unsplash.com/photos/Z9lbmEjyYjU",
+        "name": "Nikolaj Henrichsen",
+        "text": "I paid for delivery of a gift to a friend. But although she was home they sent me an email that delivery was unsuccessful and that if the next delivery was also unsuccessful the order would be cancelled. They never went to deliver for sure."
+    },
+    {
+        "image": "https://www.istockphoto.com/photo/cheerful-fashionable-adult-man-in-city-setting-gm1310533180-399904387?utm_source=unsplash&utm_medium=affiliate&utm_campaign=srp_photos_bottom&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fhuman&utm_term=human%3A%3A%3A",
+        "name": "Benson Onyango",
+        "text": "I love Nashi Peanut Butter it's one of the sweetest I have had and the delivery was first with Good packaging,will definitely buy more from you."
+    }
+]
+}

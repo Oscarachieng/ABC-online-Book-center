@@ -68,7 +68,7 @@
             margin: 0 0 30px;
             box-sizing: border-box;
         }
-        .sign-up .log-in-form{
+        .sign-up .register{
             display: none;
         }
     </style>
@@ -85,10 +85,10 @@
                 <p>Already Registered? <a href="#log-in">log-in</a></p>
             </form>
             <form action="" class="log-in-form" id="log-in">
-                <input type="text"  placeholder="Enter Username/email address" required>
-                <input type="password" name="password" placeholder="password" id="password">
+                <input type="text"  placeholder="Enter Username/email address" required id="username_email" >
+                <input type="password" name="password" placeholder="password" id="password" required>
                 <input type="submit" value="LOG-IN">
-                <p>Not yet registered? <a href="#create-account">Sign-Up</a></p>
+                <p>Not yet registered? <a href="#create-account" id="p_sign_up_a">Sign-Up</a></p>
             </form>
         </div>
     </div>
