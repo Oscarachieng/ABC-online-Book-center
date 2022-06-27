@@ -54,7 +54,7 @@ nav .navbutton :hover {
 
 /* styles the introduction section*/
 .introduction#introduction {
-    background-image: url("/assets/hot_offers.webp");
+    background-image: url("../assets/hot_offers.webp");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
