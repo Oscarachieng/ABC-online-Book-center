@@ -100,6 +100,8 @@ const renderProduct = (data) => {
     addTocat.style.color = "white";
     addTocat.style.backgroundColor = "Orange";
     addTocat.style.borderColor = "transparent";
+
+    // mouseover and mouseout effect on Add to cat buttons
     addTocat.addEventListener("mouseover", (e) => {
       e.preventDefault();
       addTocat.style.color = "orange";
@@ -129,6 +131,8 @@ const renderProduct = (data) => {
       removeItem.style.backgroundColor = "orange";
       removeItem.style.color = "white";
       removeItem.style.borderColor = "transparent"
+
+      //mouseover and mouseout effect on remove buttons
       removeItem.addEventListener("mouseover", (e) => {
         e.preventDefault();
         removeItem.style.color = "orange";
