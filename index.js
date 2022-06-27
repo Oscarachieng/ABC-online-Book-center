@@ -9,8 +9,9 @@
 
 */
 const scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000});
- 
+  speed: 1000
+});
+
 //Grabbing the product-container element
 const product_container = document.querySelector("#product-container");
 
@@ -42,9 +43,9 @@ console.log(fetchData());
  ===inside the container = create image element and resize it, width 100px,
                          = creater element to hold description, p.
 
-				    create a container to cotain these style the container div.		 
-						 = create price element and style it, append to parent
-						 = create currency element, append to parent 		
+            create a container to cotain these style the container div.		 
+             = create price element and style it, append to parent
+             = create currency element, append to parent 		
 2. 
 */
 const cart = document.querySelector(".cart");
@@ -54,20 +55,20 @@ const renderProduct = (data) => {
     productItem.style.padding = "10px";
     productItem.style.height = "400px";
     productItem.style.width = "250px";
-	//productItem.style.repeat = "no-repeat"
-	//productItem.style.margin = "10px"
+    //productItem.style.repeat = "no-repeat"
+    //productItem.style.margin = "10px"
 
     const image = document.createElement("img");
     image.style.width = "230px";
     image.style.height = "200px";
     image.src = element.deal_main_image_url;
-	productItem.appendChild(image); 
+    productItem.appendChild(image);
 
     const productTitle = document.createElement("p");
     productTitle.style.fontStyle = "italics";
     productTitle.style.width = "230px";
     productTitle.textContent = `Product Description: ${element.deal_title}`
-	productItem.appendChild(productTitle); 
+    productItem.appendChild(productTitle);
 
     //creates price element and div containing it.
     const price_container = document.createElement("div");
@@ -81,7 +82,7 @@ const renderProduct = (data) => {
     price.style.color = "chocolate";
     price.style.width = "50%"
     price.textContent = `Price Range : ${element.app_sale_range.min} to ${element.app_sale_range.max}`
-	price_container.appendChild(price); 
+    price_container.appendChild(price);
 
     //currency element.
     const currency = document.createElement("h5");
@@ -89,42 +90,68 @@ const renderProduct = (data) => {
     currency.style.fontStyle = "italics";
     currency.style.color = "chocolate";
     currency.textContent = `Currency : ${element.app_sale_range.currency}`
-	  price_container.appendChild(currency); 
+    price_container.appendChild(currency);
     productItem.appendChild(price_container);
 
     const addTocat = document.createElement("button");
     addTocat.textContent = 'Add to Cart';
     addTocat.style.padding = "4px";
-    addTocat.style.fontStyle= "oblique";
+    addTocat.style.fontStyle = "oblique";
     addTocat.style.color = "white";
     addTocat.style.backgroundColor = "Orange";
     addTocat.style.borderColor = "transparent";
-    addTocat.addEventListener("click",(e)=>{
+    addTocat.addEventListener("mouseover", (e) => {
       e.preventDefault();
-     const p = document.createElement("p");
-     p.style.padding = "10px";
-     p.style.fontSize = "larger";
-     p.style.fontStyle = "oblique";
-     p.style.backgroundColor = "creme";
-     p.textContent = `${productTitle.textContent}  ${price.textContent}  ${currency.textContent} `;
+      addTocat.style.color = "orange";
+      addTocat.style.backgroundColor = "white";
+      addTocat.style.borderColor = "transparent";
+      addTocat.style.fontSize = "larger";
+    })
+    addTocat.addEventListener("mouseout", (e) => {
+      e.preventDefault();
+      addTocat.style.color = "white";
+      addTocat.style.backgroundColor = "Orange";
+      addTocat.style.borderColor = "transparent";
+      addTocat.style.fontSize = "medium"
+    })
+    addTocat.addEventListener("click", (e) => {
+      e.preventDefault();
+      const p = document.createElement("p");
+      p.style.padding = "10px";
+      p.style.fontSize = "larger";
+      p.style.fontStyle = "oblique";
+      p.style.backgroundColor = "creme";
+      p.textContent = `${productTitle.textContent}  ${price.textContent}  ${currency.textContent} `;
 
-     const removeItem = document.createElement("button");
-     removeItem.style.padding = "8px";
-     removeItem.style.fontStyle = "oblique";
-     removeItem.style.backgroundColor = "orange";
-     removeItem.style.color = "white";
-     removeItem.style.borderColor = "transparent"
-     removeItem.textContent = "Remove";
-     removeItem.addEventListener("click", (e)=>{
-       e.preventDefault();
-       e.target.parentElement.remove(); 
-     })
+      const removeItem = document.createElement("button");
+      removeItem.style.padding = "8px";
+      removeItem.style.fontStyle = "oblique";
+      removeItem.style.backgroundColor = "orange";
+      removeItem.style.color = "white";
+      removeItem.style.borderColor = "transparent"
+      removeItem.addEventListener("mouseover", (e) => {
+        e.preventDefault();
+        removeItem.style.color = "orange";
+        removeItem.style.backgroundColor = "white";
+        removeItem.style.borderColor = "transparent";
+      })
+      removeItem.addEventListener("mouseout", (e) => {
+        e.preventDefault();
+        removeItem.style.color = "white";
+        removeItem.style.backgroundColor = "Orange";
+        removeItem.style.borderColor = "transparent";
+      })
+      removeItem.textContent = "Remove";
+      removeItem.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.target.parentElement.remove();
+      })
 
-     p.appendChild(removeItem);
-     cart.appendChild(p);
+      p.appendChild(removeItem);
+      cart.appendChild(p);
     })
     productItem.appendChild(addTocat);
-    
+
     product_container.appendChild(productItem);
   });
 };
